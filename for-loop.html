@@ -1,0 +1,40 @@
+<htm>
+    <head>
+        <title>Hello World</title>
+    </head>
+    <style></style>
+
+    <script lang="javascript">
+        function printSeries() {
+            var startNo = parseInt(document.getElementById("num1").value);
+            var endNo =  parseInt(document.getElementById("num2").value);
+            var msg = document.getElementById('msg');
+            var series = '';
+
+            for(var i = startNo; i <= endNo; i++) {
+                if(i != startNo) {
+                    series = series + ', ';
+                }
+                series = series + i;       
+            }
+            series = series.trim();
+//            series.substr()
+            msg.innerHTML = 'The Series is: ' + series;
+        }
+    </script>
+
+    <body>
+        <div style="color: blue;font-size: 20px;margin-left: 10px;">
+            <span style="margin-right: 5px;">Enter Start Number</span>
+            <input type="number" id="num1"/>
+        </div>
+        <div style="color: blue;font-size: 20px;margin-left: 10px;">
+            <span style="margin-right: 5px;">Enter End Number</span>
+            <input type="number" id="num2"/>
+        </div>
+        <button value="Print" onclick="printSeries()">Print Series</button>
+
+        <div id="msg" style="color: blue;font-size: 20px;margin-left: 10px;"> 
+        </div>
+    </body>
+</htm>

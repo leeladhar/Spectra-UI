@@ -1,0 +1,46 @@
+<htm>
+    <head>
+        <title>Hello World</title>
+    </head>
+    <style></style>
+
+    <script lang="javascript">
+        function printMaxNumber() {
+            var num1 = document.getElementById("num1").value;
+            var num2 =  document.getElementById("num2").value;
+            var num3 =  document.getElementById("num3").value;
+            var max = null;
+            var msg = null;
+            if(num1 > num2) {
+                max = num1;
+            }
+            else if(num2 > num1) {
+                max = num2;
+            }
+            else {
+                max = num3;
+            }
+            var msg = document.getElementById('msg');
+            msg.innerHTML = 'The max number is: ' + Math.max(num1, num2, num3);
+        }
+    </script>
+
+    <body>
+        <div style="color: blue;font-size: 20px;margin-left: 10px;">
+            <span style="margin-right: 5px;">Number1</span>
+            <input type="number" id="num1"/>
+        </div>
+        <div style="color: blue;font-size: 20px;margin-left: 10px;">
+            <span style="margin-right: 5px;">Number2</span>
+            <input type="number" id="num2"/>
+        </div>
+        <div style="color: blue;font-size: 20px;margin-left: 10px;">
+            <span style="margin-right: 5px;">Number3</span>
+            <input type="number" id="num3"/>
+        </div>
+        <button value="Print" onclick="printMaxNumber()">Print</button>
+
+        <div id="msg" style="color: blue;font-size: 20px;margin-left: 10px;">Max number is: 
+        </div>
+    </body>
+</htm>
